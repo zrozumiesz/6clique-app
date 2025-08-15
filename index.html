@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>6Clique</title>
+  <script>
+    // Detect platform
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/android/i.test(userAgent)) {
+      // Redirect Android users to Google Play
+      window.location.href = "https://play.google.com/store/apps/details?id=com.sixclique";
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      // Redirect iOS users to App Store
+      window.location.href = "https://apps.apple.com/app/id1234567890";
+    } else {
+      // Fallback for desktop or other devices
+      window.location.href = "https://6clique.com";
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting... If you are not redirected automatically, 
+    <a href="https://6clique.com">click here</a>.</p>
+</body>
+</html>
